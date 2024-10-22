@@ -1,0 +1,1 @@
+# germanAndino_portfolio2012_2024
