@@ -1,0 +1,18 @@
+.gabo-festival-button {
+  filter: grayscale(100%);
+  width: 120px;
+  height: 60px;
+  object-fit: fill;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gabo-festival-button:hover {
+  filter: grayscale(0%);
+    border: 2px solid var(--purple);
+  transform: scale(1.1);
+}

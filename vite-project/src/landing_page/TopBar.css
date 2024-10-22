@@ -1,0 +1,19 @@
+.top-bar{
+  padding-top: 1em;
+  padding-left: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 10vh;
+}
+
+.top-bar-button-tooltip{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Hind;
+  font-size: 2vw;
+  color: white;  
+  font-weight: 300;
+}

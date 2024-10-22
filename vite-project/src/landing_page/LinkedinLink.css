@@ -1,0 +1,50 @@
+.linkedin-link {
+    font-family: Hind;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 2em;
+  }
+  
+  .copy-link-btn {
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(34, 34, 34);
+    transition: all 0.2s ease;  
+  }
+  
+  .copy-link-btn:hover {
+    cursor: pointer;
+    border: 2px solid var(--purple);
+  }
+  
+  .copy-link-btn ion-icon {
+    font-size: 2em;
+    /* padding: .1em; */
+  }
+  
+  .linkedin-link ion-icon {
+    cursor:inherit;
+    font-size: 1em;
+  }
+  
+  .linkedin-link span {
+    /* padding-top: 1.2em; */
+    padding-right: .8em;
+    padding-left: .8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8em;
+  }
+  
+  

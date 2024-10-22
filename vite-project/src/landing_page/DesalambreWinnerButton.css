@@ -1,0 +1,19 @@
+.desalambre-festival-button {
+    width: 120px;
+    height: 60px;
+    object-fit: fill;
+    filter: grayscale(100%);
+    background-size: contain;
+    background-position: center;
+    border: none;
+    margin-right: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .desalambre-festival-button:hover {
+    filter: grayscale(0%);
+    border: 2px solid var(--purple  );
+    transform: scale(1.1);
+  }

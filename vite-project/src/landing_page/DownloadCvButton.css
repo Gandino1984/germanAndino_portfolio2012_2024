@@ -1,0 +1,27 @@
+.download-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    z-index: 3;
+    border-radius: 50%;
+    background-color: var(--gray);
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-right: 1em;
+    /* color: white; */
+  }
+
+  .download-button ion-icon, a {
+    color: white
+  }
+  
+  .download-button:hover {
+    /* transform: scale(1.1); */
+    background-color: black;
+    border: 2px solid var(--purple);
+  }

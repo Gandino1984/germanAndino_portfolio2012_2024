@@ -1,0 +1,49 @@
+.fluid-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  z-index: 3;
+  border-radius: 50%;
+  background-color: var(--gray);
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.1s ease;
+  margin-right: 1em;
+}
+
+.fluid-button:hover {
+  transform: scale(1.1);
+  background-color: black;
+  border: 2px solid var(--purple);
+}
+
+.fluid-button.active {
+  transform: scale(1.2);
+  background-color: var(--purple);
+  border: none;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1.2); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1.2); }
+}
+
+.fluid-button.active {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.fluid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, #000000, #1a1a1a);
+  opacity: 0.7;
+  border-radius: 50%;
+}
