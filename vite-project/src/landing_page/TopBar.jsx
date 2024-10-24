@@ -21,7 +21,7 @@ const TopBar = React.memo(({ onHomeButtonClick, onFluidButtonClick, onContactBut
     const tooltipText = useMemo(() => {
         switch (hoveredButton) {
             case 'home': return '';
-            case 'fluid': return 'Proyectos(próximamente)';
+            case 'fluid': return 'Proyectos en desarrollo';
             case 'contact': return 'Conecta';
             case 'linkedin': return 'LinkedIn';
             case 'document': return 'Curriculum Vitae';
