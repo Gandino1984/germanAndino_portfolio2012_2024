@@ -41,10 +41,10 @@
   cursor: pointer;
   padding-left: .5em;
   text-decoration: none;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .skills-modal {

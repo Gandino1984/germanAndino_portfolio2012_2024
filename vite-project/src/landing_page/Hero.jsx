@@ -6,16 +6,16 @@ const Hero = () => {
   const title = "German Andino";
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js';
-    script.type = 'module';
-    document.body.appendChild(script);
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.src = 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js';
+  //   script.type = 'module';
+  //   document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
 
   const [springs, api] = useSpring(() => ({
     from: { y: 0, opacity: 0 },
@@ -53,12 +53,12 @@ const Hero = () => {
       </h1>
       <span className="hero-subtitle">
         Productor Multimedia, Artista y{' '}
-        <animated.span 
+        <span 
           className='hero-subtitle-highlight' 
-          style={{
-            display: 'inline-block',
-            transform: springs.y.to(y => `translateY(${y}px)`)
-          }}
+          // style={{
+          //   display: 'inline-block',
+          //   transform: springs.y.to(y => `translateY(${y}px)`)
+          // }}
           onMouseEnter={() => setShowModal(true)}
           onMouseLeave={() => setShowModal(false)}
         >
@@ -70,19 +70,7 @@ const Hero = () => {
               ))}
             </div>
           )}
-        </animated.span>
-        <animated.span 
-          style={{
-            opacity: springs.opacity,
-            marginLeft: '0.5rem',
-            display: 'inline-flex',
-            alignItems: 'center',
-            fontSize: '1.5em',
-            color: '#00ff00'  // Bright green color
-          }}
-        >
-          <ion-icon name="checkmark-circle-outline"></ion-icon>
-        </animated.span>
+        </span>
       </span>
     </div>
   );

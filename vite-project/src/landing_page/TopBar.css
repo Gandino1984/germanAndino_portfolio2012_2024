@@ -1,6 +1,7 @@
 .top-bar {
   padding-top: 1em;
   padding-left: 3em;
+  /* padding-right: 3em;   */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -23,8 +24,8 @@
 /* Responsive design for screens smaller than 720px */
 @media screen and (max-width: 720px) {
   .top-bar {
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
     justify-content: space-around;
     width: 100%;
   }

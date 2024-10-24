@@ -37,7 +37,7 @@
   animation: pulse 1.5s infinite ease-in-out;
 }
 
-.fluid {
+/* .fluid {
   position: absolute;
   top: 0;
   left: 0;
@@ -46,4 +46,4 @@
   background: radial-gradient(circle at center, #000000, #1a1a1a);
   opacity: 0.7;
   border-radius: 50%;
-}
+} */

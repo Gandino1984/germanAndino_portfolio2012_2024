@@ -49,11 +49,11 @@ const TopBar = React.memo(({ onHomeButtonClick, onFluidButtonClick, onContactBut
     return (
         <div className="top-bar">
             {renderButton(HomeButton, 'home', 'home-outline', activeButton === 'home', onHomeButtonClick)}
-            {renderButton(FluidButton, 'fluid', 'layers-outline', activeButton === 'fluid', onFluidButtonClick)}
+            {renderButton(FluidButton, 'fluid', 'code-working-outline', activeButton === 'fluid', onFluidButtonClick)}
             {renderButton(ContactButton, 'contact', 'mail-outline', activeButton === 'contact', onContactButtonClick)}
             {renderButton(LinkedinButton, 'linkedin', 'logo-linkedin', activeButton === 'linkedin', onLinkedinButtonClick)}
             {renderButton(DownloadCvButton, 'document', 'document-outline', activeButton === 'document', onDocumentButtonClick)}
-
+            
             <animated.span className='top-bar-button-tooltip' style={tooltipSpring}>
                 {tooltipText}
             </animated.span>
