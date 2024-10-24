@@ -16,22 +16,25 @@
   flex-wrap: wrap;
   font-family: Montserrat;
   color: white;
-  font-size: 5.5vw;
-  letter-spacing: .1vw;
+  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  letter-spacing: clamp(0.1rem, 0.1vw, 0.3rem);
   font-weight: bold;
   text-shadow: black 3px 3px;
+  margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
   user-select: none;
   font-family: Hind;
-  font-size: 2vw;
+  font-size: clamp(1.2rem, 2vw, 2rem);
   color: rgb(198, 198, 198);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
   font-weight: 300;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 .hero-subtitle-highlight {
@@ -58,6 +61,8 @@
   gap: 10px;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  max-width: 300px;
 }
 
 .skills-modal ion-icon {
@@ -69,4 +74,57 @@
 .skills-modal ion-icon:hover {
   color: var(--purple);
   transform: scale(1.2);
+}
+
+/* Responsive breakpoints */
+@media screen and (max-width: 768px) {
+  .hero-wrapper {
+    width: 90vw;
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    text-shadow: black 2px 2px;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    padding: 0 1rem;
+  }
+
+  .skills-modal {
+    padding: 8px;
+    gap: 8px;
+    max-width: 250px;
+  }
+
+  .skills-modal ion-icon {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-wrapper {
+    width: 95vw;
+  }
+
+  .hero-subtitle {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero-subtitle-highlight {
+    padding-left: 0;
+  }
+
+  .skills-modal {
+    width: 200px;
+    padding: 6px;
+    gap: 6px;
+  }
+
+  .skills-modal ion-icon {
+    font-size: 18px;
+  }
 }
