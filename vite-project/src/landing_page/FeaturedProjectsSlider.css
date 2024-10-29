@@ -14,8 +14,6 @@
   transition: all 0.2s ease;
 }
 
-
-
 .featured-projects-slider:hover {
   background-color: var(--darkGray);
   border: 2px solid black;

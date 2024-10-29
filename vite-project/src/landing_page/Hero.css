@@ -41,7 +41,6 @@
   cursor: pointer;
   padding-left: .5em;
   text-decoration: none;
-  /* display: inline-block; */
   position: relative;
   color: #ffffff;
   font-weight: 500;
@@ -76,8 +75,38 @@
   transform: scale(1.2);
 }
 
-/* Responsive breakpoints */
-@media screen and (max-width: 768px) {
+
+/* Media query for medium-sized screens between 771px and 900px */
+@media screen and (min-width: 720px) and (max-width: 900px) {
+  .hero-wrapper {
+    width: 80vw;
+    padding: 0 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.1rem, 6vw, 4rem);
+    text-shadow: black 2.5px 2.5px;
+    letter-spacing: clamp(0.1rem, 0.08vw, 0.2rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(.8rem, 3vw, 1.4rem);
+    padding: 0 1.5rem;
+  }
+
+  .skills-modal {
+    max-width: 280px;
+    padding: 9px;
+    gap: 9px;
+  }
+
+  .skills-modal ion-icon {
+    font-size: 22px;
+  }
+}
+
+/* Responsive breakpoints for tablets and smaller screens */
+@media screen and (max-width: 719px) {
   .hero-wrapper {
     width: 90vw;
     padding: 0 1rem;
@@ -104,6 +133,7 @@
   }
 }
 
+/* Additional breakpoint for very small screens */
 @media screen and (max-width: 480px) {
   .hero-wrapper {
     width: 95vw;
