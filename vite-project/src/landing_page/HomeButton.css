@@ -1,24 +1,31 @@
 .home-button {
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 3.5em;
+    height: 3.5em;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .5em;
     border-radius: 50%;
     background-color: var(--gray);
     border: none;
     cursor: pointer;
-    overflow: hidden;
-    transition: all 0.1s ease;
+    transition: all 150ms ease;
     margin-right: 1em;
   }
-  
+
   .home-button:hover {
     transform: scale(1.1);
     background-color: black;
     border: 2px solid var(--purple);
   }
-  
-  /* Remove margin-right as it's handled by the TopBar component */
+
+  .home-button ion-icon {
+    position: relative;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+  }

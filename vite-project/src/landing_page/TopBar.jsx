@@ -36,11 +36,10 @@ const TopBar = React.memo(({ onHomeButtonClick, onFluidButtonClick, onContactBut
         reset: true,
     });
 
-    const renderButton = useCallback((ButtonComponent, name, icon, isActive, onClick) => (
+    const renderButton = useCallback((ButtonComponent, name, icon, onClick) => (
         <div onMouseEnter={() => handleMouseEnter(name)} onMouseLeave={handleMouseLeave}>
             <ButtonComponent
                 icon={icon}
-                isActive={isActive}
                 onClick={onClick}
             />
         </div>
