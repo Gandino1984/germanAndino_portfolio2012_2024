@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { useSpring, animated, config } from 'react-spring';
 import './FluidButton.css';
 
 const FluidButton = ({ icon, onClick }) => {
@@ -8,7 +6,7 @@ const FluidButton = ({ icon, onClick }) => {
     <button 
       className={`fluid-button`}
       onClick={onClick}
-      aria-label="fluid button"
+      aria-label="work in progress button"
     >
     
         <ion-icon name={icon}></ion-icon>

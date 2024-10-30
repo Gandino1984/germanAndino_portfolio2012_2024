@@ -3,15 +3,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 3em;
+  height: 3em;
   z-index: 3;
   border-radius: 50%;
   background-color: var(--gray);
   border: none;
   cursor: pointer;
   overflow: hidden;
-  transition: all 0.1s ease;
+  transition: all 150ms ease;
   margin-right: 1em;
 }
 
@@ -19,6 +19,16 @@
   transform: scale(1.1);
   background-color: black;
   border: 2px solid var(--purple);
+}
+
+.contact-button ion-icon{
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
 }
 
 .contact-button.active {

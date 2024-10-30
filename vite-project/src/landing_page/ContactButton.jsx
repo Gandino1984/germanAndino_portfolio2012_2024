@@ -1,10 +1,8 @@
 import React from 'react';
-import { useState } from 'react';
-import { useSpring, animated, config } from 'react-spring';
 import './ContactButton.css';
 
 
-const ContactButton = ({ icon, isActive, onClick }) => {
+const ContactButton = ({ icon, onClick }) => {
 
 
   return (

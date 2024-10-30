@@ -1,22 +1,30 @@
 .linkedin-button {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 3em;
+  height: 3em;
   margin-right: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 1em; */
   border-radius: 50%;
   background-color: var(--gray);
   border: none;
   cursor: pointer;
-  overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 150ms ease;
 }
 
 .linkedin-button:hover {
-  /* transform: scale(1.1); */
+  transform: scale(1.1);
   background-color: black;
   border: 2px solid var(--purple);
+}
+
+.linkedin-button ion-icon{
+  width: 1.7em;
+  height: 1.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
 }
