@@ -10,33 +10,10 @@ export const useLandingPageLogic = () => {
   const [isHoveringDesalambreBtn, setIsHoveringDesalambreBtn] = useState(false);
   const [showFeaturedProjects, setShowFeaturedProjects] = useState(true);
   const [fluidButtonClicked, setFluidButtonClicked] = useState(false);
-  const [activeTopBarButton, setActiveTopBarButton] = useState('home');
   const [showBottomBar, setShowBottomBar] = useState(true);
   const [showStoryScroller, setShowStoryScroller] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsOverlayVisible(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth < 720);
-      if (window.innerWidth < 720) {
-        setShowBottomBar(false);
-      } else {
-        // Only show bottom bar in desktop view if we're not in fluid mode
-        setShowBottomBar(!fluidButtonClicked);
-      }
-    };
-
-    // Initial check
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [fluidButtonClicked]);
+  const [activeTopBarButton, setActiveTopBarButton] = useState('home');
 
   const handleClick = useCallback(() => {
     setIsOverlayVisible(false);

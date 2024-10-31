@@ -19,7 +19,26 @@
   border: 2px solid var(--purple);
 }
 
-.linkedin-button ion-icon{
+.linkedin-button:active {
+  transform: scale(0.95);
+  background-color: var(--purple);
+  box-shadow: 0 0 15px rgba(var(--purple-rgb), 0.5);
+}
+
+.linkedin-button.selected {
+  background-color: var(--purple);
+  transform: scale(1.2);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.linkedin-button.selected:hover {
+  transform: scale(1.1);
+  background-color: black;
+  border: 2px solid var(--purple);
+  animation: none;
+}
+
+.linkedin-button ion-icon {
   width: 1.7em;
   height: 1.7em;
   display: flex;
@@ -27,4 +46,10 @@
   align-items: center;
   color: white;
   cursor: pointer;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1.2); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1.2); }
 }

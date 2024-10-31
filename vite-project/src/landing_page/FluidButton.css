@@ -21,29 +21,37 @@
   border: 2px solid var(--purple);
 }
 
-.fluid-button ion-icon {
-    width: 2em;
-    height: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    cursor: pointer;
+.fluid-button:active {
+  transform: scale(0.95);
+  background-color: var(--purple);
+  box-shadow: 0 0 15px rgba(var(--purple-rgb), 0.5);
 }
 
-
-.fluid-button.active {
-  transform: scale(1.2);
+.fluid-button.selected {
   background-color: var(--purple);
-  border: none;
+  transform: scale(1.2);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.fluid-button.selected:hover {
+  transform: scale(1.1);
+  background-color: black;
+  border: 2px solid var(--purple);
+  animation: none;
+}
+
+.fluid-button ion-icon {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
 }
 
 @keyframes pulse {
   0% { transform: scale(1.2); }
   50% { transform: scale(1.15); }
   100% { transform: scale(1.2); }
-}
-
-.fluid-button.active {
-  animation: pulse 1.5s infinite ease-in-out;
 }
