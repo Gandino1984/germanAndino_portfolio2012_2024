@@ -21,7 +21,7 @@
   width: 100vw;
   height: 100vh;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.89);
+  background-color: #000000c1;
   position: relative;
 }
 
@@ -57,6 +57,5 @@
   font-family: Montserrat;
   font-weight: 600;
   padding-bottom: .3em;
-
 }
 

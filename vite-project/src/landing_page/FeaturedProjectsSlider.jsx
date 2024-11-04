@@ -92,8 +92,8 @@ const Slide = React.memo(({ project, isActive }) => {
         </div>
 
         <div className="buttons-container">
-            <button onClick={handleViewContent} className="view-button">
-               <ion-icon name="eye-outline"></ion-icon>
+            <button onClick={handleViewContent} className="view-outside-button">
+                <ion-icon name="log-out"></ion-icon>
             </button>
         
             <button onClick={handleShare} className={`share-button ${isShared ? 'shared' : ''}`}>

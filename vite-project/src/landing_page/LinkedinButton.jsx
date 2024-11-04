@@ -1,17 +1,15 @@
 import React from 'react';
-import { useState } from 'react';
-import { useSpring, animated, config } from 'react-spring';
 import './LinkedinButton.css';
 
-const LinkedinButton = ({ icon, onClick }) => {
-
+const LinkedinButton = ({ icon, onClick, isSelected }) => {
   return (
     <button 
-      className={`linkedin-button`}
+      className={`linkedin-button ${isSelected ? 'selected' : ''}`}
       onClick={onClick}
       aria-label="linkedin button"
+      aria-pressed={isSelected}
     > 
-        <ion-icon name={icon}></ion-icon> 
+      <ion-icon name={icon}></ion-icon> 
     </button>
   );
 };

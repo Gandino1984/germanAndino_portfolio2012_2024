@@ -3,15 +3,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 3em;
+  height: 3em;
   z-index: 3;
   border-radius: 50%;
   background-color: var(--gray);
   border: none;
   cursor: pointer;
   overflow: hidden;
-  transition: all 0.1s ease;
+  transition: all 150ms ease;
   margin-right: 1em;
 }
 
@@ -21,18 +21,37 @@
   border: 2px solid var(--purple);
 }
 
-.contact-button.active {
-  transform: scale(1.2);
+.contact-button:active {
+  transform: scale(0.95);
   background-color: var(--purple);
-  border: none;
+  box-shadow: 0 0 15px rgba(var(--purple-rgb), 0.5);
+}
+
+.contact-button.selected {
+  background-color: var(--purple);
+  transform: scale(1.2);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.contact-button.selected:hover {
+  transform: scale(1.1);
+  background-color: black;
+  border: 2px solid var(--purple);
+  animation: none;
+}
+
+.contact-button ion-icon {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
 }
 
 @keyframes pulse {
   0% { transform: scale(1.2); }
   50% { transform: scale(1.15); }
   100% { transform: scale(1.2); }
-}
-
-.contact-button.active {
-  animation: pulse 1.5s infinite ease-in-out;
 }

@@ -1,4 +1,4 @@
-.top-bar{
+.top-bar {
   padding-top: 1em;
   padding-left: 3em;
   display: flex;
@@ -6,9 +6,11 @@
   justify-content: flex-start;
   width: 100vw;
   height: 10vh;
+  gap: 1em;
+  transition: all 0.2s ease;
 }
 
-.top-bar-button-tooltip{
+.top-bar-button-tooltip {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,4 +18,42 @@
   font-size: 2vw;
   color: white;  
   font-weight: 300;
+}
+
+/* New media query for medium-sized screens between 720px and 900px */
+@media screen and (min-width: 721px) and (max-width: 900px) {
+  .top-bar {
+    padding-left: 3em;
+    gap: 0.75em; /* Slightly reduce gap between items */
+    height: 9vh; /* Slightly reduce height */
+  }
+
+  .top-bar-button-tooltip {
+    font-size: 18px; /* Fixed size for better readability */
+    white-space: nowrap;
+  }
+}
+
+/* Responsive design for screens smaller than 720px */
+@media screen and (max-width: 720px) {
+  .top-bar {
+    padding-left: 3em;
+    padding-right: 3em;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .top-bar-button-tooltip {
+    font-size: 16px; /* Change from vw to fixed size for better readability on mobile */
+    position: absolute;
+    white-space: nowrap;
+  }
+}
+
+/* Additional breakpoint for very small screens */
+@media screen and (max-width: 480px) {
+  .top-bar {
+    padding-top: 0.5em;
+    height: 8vh;
+  }
 }
