@@ -5,14 +5,11 @@ import TopBar from './TopBar.jsx';
 import MiddleSection from './MiddleSection.jsx';
 import BottomBar from './BottomBar.jsx';
 import { useLandingPageLogic } from './landingPageLogic';
-import bgVideoLanding from '/src/assets/video/elHeroeSenegalesExtract.mp4';
+import bgVideoLanding from '/src/assets/video/elHeroeSenegalesExtract.mp4'
 import StoryScroller from '../story_scroller/StoryScroller.jsx'; 
 import stories from '../story_scroller/stories.js';
-import { ScreenSizeCheck } from './screenCheck';
 
 const LandingPage = () => {
-  const { isMobile } = ScreenSizeCheck();
-  
   const {
     showContactForm,
     isHoveringGaboBtn,
@@ -35,16 +32,12 @@ const LandingPage = () => {
     closeStoryScroller,
   } = useLandingPageLogic();
 
+
+
   return (
     <div className="landing-page">    
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-          className="background-video"
-        >
-          <source src={bgVideoLanding} type="video/mp4" />
+        <video autoPlay loop muted className="background-video">
+          <source src={bgVideoLanding} />
           Your browser does not support the video tag.
         </video>
 
@@ -57,7 +50,6 @@ const LandingPage = () => {
               activeButton={activeTopBarButton}
               onDocumentButtonClick={handleDocumentButtonClick}
             />
-            
             {showStoryScroller ? (
               <StoryScroller stories={stories} onClose={closeStoryScroller} />
             ) : (
@@ -70,8 +62,7 @@ const LandingPage = () => {
                 onCloseContactForm={closeContactForm}
               />
             )}
-            
-            {showBottomBar && !isMobile && (
+            {showBottomBar && (
               <BottomBar 
                 onDesalambreEnter={() => handleBottomBarButtonEnter('desalambre')}
                 onDesalambreLeave={handleBottomBarButtonLeave}
