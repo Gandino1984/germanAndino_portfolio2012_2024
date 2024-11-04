@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './MiddleSection.css';
 import Hero from './Hero.jsx';
 import SideInfoDisplay from './SideInfoDisplay.jsx';
+import { ScreenSizeCheck } from './screenCheck';
 
 const MiddleSection = ({ 
   isHoveringDesalambreBtn,
@@ -11,23 +12,7 @@ const MiddleSection = ({
   showFeaturedProjects,
   onCloseContactForm
 }) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Function to check if viewport is mobile
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 720);
-    };
-
-    // Initial check
-    checkMobile();
-
-    // Add event listener for window resize
-    window.addEventListener('resize', checkMobile);
-
-    // Cleanup
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+  const { isMobile } = ScreenSizeCheck();
 
   return (
     <div className='middle-section-wrapper'>
