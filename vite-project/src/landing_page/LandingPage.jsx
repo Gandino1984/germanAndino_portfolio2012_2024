@@ -1,5 +1,5 @@
 import React from 'react';
-import { animated } from 'react-spring';
+// import { animated } from 'react-spring';
 import './LandingPage.css';
 import TopBar from './TopBar.jsx';
 import MiddleSection from './MiddleSection.jsx';
@@ -41,7 +41,7 @@ const LandingPage = () => {
           Your browser does not support the video tag.
         </video>
 
-        <animated.div className="landing-page-wrapper" style={overlayProps}>
+        <div className="landing-page-wrapper" style={overlayProps}>
             <TopBar 
               onHomeButtonClick={handleHomeButtonClick}
               onFluidButtonClick={handleClick}
@@ -72,7 +72,7 @@ const LandingPage = () => {
                 onGaboLeave={handleBottomBarButtonLeave}
               />
             )}
-        </animated.div>
+        </div>
     </div>
   );
 };
