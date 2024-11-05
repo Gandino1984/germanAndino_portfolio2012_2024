@@ -1,7 +1,7 @@
 .featured-projects-slider {
   position: absolute;
   z-index: 3;
-  margin-right: 1em;
+  margin-right: 2em;
   display: flex;
   align-items: center;
   justify-content: center;

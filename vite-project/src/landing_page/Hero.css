@@ -75,11 +75,9 @@
   transform: scale(1.2);
 }
 
-
-/* Media query for medium-sized screens between 771px and 900px */
 @media screen and (min-width: 720px) and (max-width: 900px) {
   .hero-wrapper {
-    width: 80vw;
+    width: 65vw;
     padding: 0 1.5rem;
   }
 
@@ -105,7 +103,7 @@
   }
 }
 
-/* Responsive breakpoints for tablets and smaller screens */
+
 @media screen and (max-width: 719px) {
   .hero-wrapper {
     width: 90vw;
